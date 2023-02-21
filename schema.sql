@@ -1,6 +1,4 @@
 create database placement_management_system;
-use movies;
-DROP TABLE IF EXISTS movies.movie;
 
 CREATE TYPE Phone AS (
     area_code CHAR(3),
@@ -61,7 +59,7 @@ CREATE TABLE placement_management_system.job_profile(
 );
 
 -- table4
-CREATE TABLE hr_invited(
+CREATE TABLE placement_management_system.hr_invited(
     email_id VARCHAR(255) NOT NULL PRIMARY KEY,
     hr_status VARCHAR(50) NOT NULL,
     company_name VARCHAR(100) NOT NULL
