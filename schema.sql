@@ -1,4 +1,5 @@
 create database placement_management_system;
+use placement_management_system;
 
 CREATE TYPE Phone AS (
     area_code CHAR(3),
