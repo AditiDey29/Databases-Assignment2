@@ -1,4 +1,3 @@
-
 use placement_management_system;
 DROP TABLE IF EXISTS placement_management_system.hr_invited; 
 
