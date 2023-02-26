@@ -17,7 +17,7 @@ CREATE TABLE student(
   major_disciplines VARCHAR(50) not null,
   minor_disciplines VARCHAR(50) DEFAULT 0,
   date_of_joining date
-);
+); 
 
 INSERT INTO student (student_id, cpi, backlogs, category, gender, dob, professional_experience, personal_mail, year_of_graduation, current_program, cv, major_disciplines, minor_disciplines, date_of_joining) VALUES
   (1, 8.5, false, 'General', 'Male', '2000-01-01', 2, 'john.doe@example.com', 2022, 'Bachelor of Science', '0x123456789abcdef', 'Computer Science', NULL, '2023-02-26'),
