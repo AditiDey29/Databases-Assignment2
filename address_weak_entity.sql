@@ -18,9 +18,6 @@ INSERT INTO address (person_id, zip_code, city, state, address_line, parent_id) 
 (20110146, 229908, "panaji", "goa", "xyz road", 20110146);
 
 
-SELECT * FROM person NATURAL JOIN address;
-
-SELECT * FROM person LEFT JOIN address ON person.person_id = address.person_id;
 
 
 

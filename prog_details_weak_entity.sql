@@ -21,6 +21,3 @@ insert into prog_details(job_id, no_of_pos_available, basic, hra, gross, other, 
 ("00000000002", 3, 12200, 698979, 87680, 098756, 7889, 899799, "MTECH", "00000000014"),
 ("00000000003", 2, 12200, 678979, 8768, 098756, 7889, 897998899, "BTECH", "00000000018"),
 ("00000000004", 2, 12200, 678979, 8768, 098756, 7889, 897998899, "MSC", "00000000019");
-
--- drop table prog_details;
-SELECT job_profile.job_id, job_designation, job_location, program, parent_id FROM job_profile RIGHT JOIN prog_details ON job_profile.job_id = prog_details.parent_id;
