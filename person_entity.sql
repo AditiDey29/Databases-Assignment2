@@ -39,8 +39,8 @@ VALUES
 -- inserting company representative entries
 INSERT INTO person(person_id, first_name, middle_name, last_name, mobile_number, email, profile_photo, password_hash, nationality, person_role)
 VALUES
-(33123467,"Sophie", "Chen", "", '{"country_code":1, "number":9012345678}', "sophiechen2@example.com", "", "password9", "Taiwanese", "admin"),
-(33123468,"Michael", "Lee", "", '{"country_code":1, "number":1234509876}', "michaellee2@example.com", "", "password10", "American", "admin");
+(33123467,"Sophie", "Chen", "", '{"country_code":1, "number":9012345678}', "sophiechen2@example.com", "", "password9", "Taiwanese", "company_rep"),
+(33123468,"Michael", "Lee", "", '{"country_code":1, "number":1234509876}', "michaellee2@example.com", "", "password10", "American", "company_rep");
 
 
 select * from person;
