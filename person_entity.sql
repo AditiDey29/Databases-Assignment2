@@ -16,7 +16,7 @@ CREATE TABLE placement_management_system.person (
     nationality varchar(255),
     person_role VARCHAR(255)
 );
-
+-- inserting student entries
 INSERT INTO person(person_id, first_name, middle_name, last_name, mobile_number, email, profile_photo, password_hash, nationality, person_role)
 VALUES 
 (20110146,"John", "Doe", "", '{"country_code":1, "number":1234567890}', "johndoe@example.com", "", "password1", "American", "student"),
@@ -29,5 +29,11 @@ VALUES
 (20110167,"Alex", "Garcia", "", '{"country_code":1, "number":8901234567}', "alexgarcia@example.com", "", "password8", "Mexican", "student"),
 (20110168,"Sophie", "Chen", "", '{"country_code":1, "number":9012345678}', "sophiechen@example.com", "", "password9", "Taiwanese", "student"),
 (20110190,"Michael", "Lee", "", '{"country_code":1, "number":1234509876}', "michaellee@example.com", "", "password10", "American", "student");
+
+-- inserting admin entries
+INSERT INTO person(person_id, first_name, middle_name, last_name, mobile_number, email, profile_photo, password_hash, nationality, person_role)
+VALUES
+(11007890,"Sophie", "Chen", "", '{"country_code":1, "number":9012345678}', "sophiechen1@example.com", "", "password9", "Taiwanese", "admin"),
+(11007891,"Michael", "Lee", "", '{"country_code":1, "number":1234509876}', "michaellee1@example.com", "", "password10", "American", "admin");
 
 select * from person;

@@ -3,7 +3,7 @@ use placement_management_system;
 DROP TABLE IF EXISTS placement_management_system.company_details; 
 
 CREATE TABLE placement_management_system.company_details (
-  company_id varchar(50) not null PRIMARY KEY,
+  person_id int not null PRIMARY KEY,
   company_rep VARCHAR(50) NOT NULL,
   company_name VARCHAR(100) NOT NULL,
   website VARCHAR(100),
@@ -13,7 +13,9 @@ CREATE TABLE placement_management_system.company_details (
   no_of_rooms_required INT NOT NULL,
   overall_timeline date NOT NULL,
   CONSTRAINT chk_mem CHECK (no_of_members > 0),
-  CONSTRAINT chk_rooms CHECK ( no_of_rooms_required >= 0)
+  CONSTRAINT chk_rooms CHECK ( no_of_rooms_required >= 0),
+  parent_id int,
+  FOREIGN KEY(parent_id) REFERENCES person(person_id)
 );
 -- DELIMITER ??
 -- CREATE TRIGGER check_positive_days
