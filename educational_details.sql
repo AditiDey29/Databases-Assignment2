@@ -1,4 +1,3 @@
-create database placement_management_system;
 use placement_management_system;
 DROP TABLE IF EXISTS placement_management_system.educational_details; 
 

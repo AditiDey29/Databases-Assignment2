@@ -1,4 +1,3 @@
-create database placement_management_system;
 use placement_management_system;
 DROP TABLE IF EXISTS placement_management_system.address; 
 
@@ -9,8 +8,10 @@ CREATE TABLE placement_management_system.address (
   state VARCHAR(50) NOT NULL,
   address_line VARCHAR(255) NOT NULL,
   parent_id INT,
-  FOREIGN KEY (parent_id) REFERENCES person(person_id),
-  PRIMARY KEY (person_id, parent_id)
+  PRIMARY KEY (person_id, parent_id),
+  constraint located_at FOREIGN KEY (parent_id) REFERENCES person(person_id)
+  on update cascade
+  on delete cascade
 );
 
 INSERT INTO placement_management_system.address (person_id, zip_code, city, state, address_line, parent_id)

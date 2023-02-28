@@ -1,5 +1,3 @@
-create database hr_invited;
-use hr_invited;
 DROP TABLE IF EXISTS placement_management_system.hr;
 
 CREATE TABLE placement_management_system.hr ( 
