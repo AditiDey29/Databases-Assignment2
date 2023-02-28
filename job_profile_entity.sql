@@ -1,4 +1,4 @@
--- table3
+drop table job_profile;
 use placement_management_system;
 
 CREATE TABLE placement_management_system.job_profile(
@@ -26,6 +26,7 @@ CREATE TABLE placement_management_system.job_profile(
     technical_interviews BOOLEAN DEFAULT 0 CONSTRAINT tech_interview CHECK(technical_interviews>=0),
     hr_interviews BOOLEAN DEFAULT 0 constraint hr_interview check(hr_interviews>=0)
 );
+
 
 INSERT INTO job_profile(job_id, job_designation, job_description, job_location, service_bond, terms_and_condition, six_month_intern_possibility, early_onboarding_possibility, particularly_early_onboarding_required,early_graduate_students_are_excluded, current_status, start_date, end_date, shortlist_from_resume,eligible_minor_disc,ppt ,eligible_major_disc,technical_test ,aptitude_test,psychometric_test,group_discussion,technical_interviews,hr_interviews)
 VALUES

@@ -9,8 +9,10 @@ CREATE TABLE prog_details (
   ctc INT NOT NULL CONSTRAINT cons7 CHECK (ctc > 0),
   program VARCHAR(255) NOT NULL,
   parent_id VARCHAR(50),
-  FOREIGN KEY (parent_id) REFERENCES job_profile (job_id),
-  PRIMARY KEY (job_id, parent_id)
+  PRIMARY KEY (job_id, parent_id),
+  constraint var_program FOREIGN KEY (parent_id) REFERENCES job_profile (job_id)
+  on update cascade
+  on delete cascade
 );
 
 -- select * from job_profile;
