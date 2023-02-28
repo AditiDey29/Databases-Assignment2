@@ -2,15 +2,16 @@ use placement_management_system;
 DROP TABLE IF EXISTS placement_management_system.educational_details; 
 
 CREATE TABLE placement_management_system.educational_details (
-  person_id INT UNIQUE,
+  person_id INT UNIQUE PRIMARY KEY,
   board_for_tenth ENUM('ICSE', 'CBSE', 'State Board', 'OTHER') NOT NULL,
   board_of_twelfth ENUM('ICSE', 'CBSE', 'State Board', 'OTHER') NOT NULL,
   tenth_percentage DECIMAL(5,2) NOT NULL,
   twelfth_percentage DECIMAL(5,2) NOT NULL,
   competitive_exam_name ENUM('JEE Advanced', 'Math Olympiad', 'GATE', 'IIT JAM') NOT NULL,
   competitive_exam_rank INT NOT NULL,
-  FOREIGN KEY (person_id) REFERENCES student (person_id),
-  PRIMARY KEY (person_id)
+  constraint education FOREIGN KEY (person_id) REFERENCES student (person_id)
+  on update cascade
+  on delete cascade
 );
 
 -- Insert data for each student in the student table
